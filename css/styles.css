@@ -107,10 +107,16 @@ ul {
 
 .header-logo-tail {
   color: var(--main-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .page-header .logo {
   margin-right: 85px;
+}
+
+.header-logo-tail:hover,
+.header-logo-tail:focus {
+  color: var(--accent-text-color);
 }
 
 /* Navigation */
@@ -192,10 +198,8 @@ ul {
   color: var(--accent-text-color);
 }
 
-.contacts-link:hover .icon-envelope,
-.contacts-link:hover .icon-smartphone,
-.contacts-link:focus .icon-envelope,
-.contacts-link:focus .icon-smartphone {
+.contacts-link:hover .contacts-icon,
+.contacts-link:focus .contacts-icon {
   fill: var(--accent-text-color);
   stroke: var(--accent-text-color);
   stroke-width: 2px;
@@ -634,6 +638,12 @@ footer .logo {
 
 .footer-logo-tail {
   color: var(--dark-theme-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-logo-tail:hover,
+.footer-logo-tail:focus {
+  color: var(--accent-text-color);
 }
 
 .contacts li {
@@ -648,6 +658,14 @@ address li:not(:last-child) {
 footer .mail,
 footer .tel {
   color: var(--footer-contacts-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link.mail:hover,
+.link.tel:hover,
+.link.mail:focus,
+.link.tel:focus {
+  color: var(--accent-text-color);
 }
 
 .join-us > p,
