@@ -9,12 +9,14 @@
   --main-background-color: #ffffff;
   --paragraph-text-color: #757575;
   --accent-text-color: #2196f3;
+  --hover-button-color: #188ce8;
   --dark-theme-text-color: #ffffff;
   --transparent-background: rgba(47, 48, 58, 0.8);
   --footer-contacts-color: rgba(255, 255, 255, 0.6);
   --plain-button-color: #f5f4fa;
   --section-staff-color: #f5f4fa;
   --background-footer-color: #2f303a;
+  --overlay-modal-color: rgba(0, 0, 0, 0.2);
   --border-color: #afb1b8;
   --font-body: "Roboto", sans-serif;
   --font-logo: "Raleway", sans-serif;
@@ -302,8 +304,14 @@ button {
   padding: 10px 32px;
   min-width: 200px;
   margin-top: 30px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 50ms;
 }
 
+.button.primary:hover,
+.button.primary:focus {
+  background-color: var(--hover-button-color);
+}
 .button:focus,
 .button:hover {
   color: var(--dark-theme-text-color);
@@ -700,14 +708,56 @@ footer .tel {
   margin-top: 20px;
   margin-bottom: 20px;
   min-width: 200px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 50ms;
 }
 
+.button.secondary:hover,
+.button.secondary:focus {
+  background-color: var(--hover-button-color);
+}
+
+.icon-send {
+  fill: var(--dark-theme-text-color);
+  margin-left: 10px;
+}
+
+/* Adding icons by before/after: */
+/*
 .secondary::after {
   content: "";
   background-image: url(../images/icon-send.svg);
   width: 24px;
   height: 24px;
   margin-left: 10px;
+} */
+
+.subscribe-holder {
+  background-color: var(--background-footer-color);
+  width: 358px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  padding: 15px 16px 15px;
+  margin-top: 20px;
+  margin-right: 12px;
+
+  color: var(--footer-contacts-color);
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+}
+
+.subscribe-holder::placeholder {
+  color: var(--footer-contacts-color);
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+}
+
+.subscribe-holder::placeholder:focus {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 .footer-social,

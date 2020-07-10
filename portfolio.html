@@ -332,13 +332,55 @@
           </ul>
         </div>
         <div class="container-form">
-          <b class="title-form">Подпишитесь на рассылку</b> <br />
-          <button class="button secondary">Подписаться</button>
+          <form class="subscribe">
+            <b class="title-form">Подпишитесь на рассылку</b>
+            <input
+              type="email"
+              name="email-footer"
+              class="subscribe-holder"
+              placeholder="E-mail"
+            />
+            <button class="button secondary" type="submit">
+              Подписаться<svg width="24" height="24" class="icon-send">
+                <use href="./images/sprite.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
           <!-- форма подписки -->
         </div>
       </div>
 
       <!-- <p class="copyright">&copy; 2020 | Developed by GoIT Students</p> -->
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <form class="form-field">
+          <h1>Оставьте свои данные</h1>
+          <label for="" name=""></label>
+          <input type="text" name="" id="" placeholder="Имя" />
+          <label for="" name=""></label>
+          <input type="text" name="" id="" placeholder="Телефон" />
+          <label for="" name=""></label>
+          <input type="text" name="" id="" placeholder="Почта" />
+          <label for="" name=""></label>
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Комментарий"
+          ></textarea>
+          <input type="checkbox" name="" id="" />
+          <label for="" name=""
+            >Соглашаюсь с рассылкой и принимаю
+            <a class="link">Условия договора</a></label
+          >
+          <button type="submit" data-modal-close>Отправить</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>

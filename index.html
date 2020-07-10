@@ -73,7 +73,9 @@
       <div class="overlay">
         <section class="hero">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <a href="" class="button primary">Заказать услугу</a>
+          <button class="button primary" data-modal-open>
+            Заказать услугу
+          </button>
         </section>
       </div>
 
@@ -496,8 +498,20 @@
           </ul>
         </div>
         <div class="container-form">
-          <b class="title-form">Подпишитесь на рассылку</b>
-          <button class="button secondary">Подписаться</button>
+          <form class="subscribe">
+            <b class="title-form">Подпишитесь на рассылку</b>
+            <input
+              type="email"
+              name="email-footer"
+              class="subscribe-holder"
+              placeholder="E-mail"
+            />
+            <button class="button secondary" type="submit">
+              Подписаться<svg width="24" height="24" class="icon-send">
+                <use href="./images/sprite.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
           <!-- форма подписки -->
         </div>
       </div>
