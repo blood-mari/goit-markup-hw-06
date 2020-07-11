@@ -88,7 +88,7 @@ ul {
 
 .page-header {
   position: fixed;
-  z-index: 2;
+  z-index: 1;
   min-height: 80px;
   width: 100%;
   font-weight: 500;
@@ -266,7 +266,6 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  outline: 1px solid slateblue;
 }
 
 /* Order the option - main button */
@@ -736,6 +735,8 @@ footer .tel {
   background-color: var(--background-footer-color);
   width: 358px;
   border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 
   padding: 15px 16px 15px;
   margin-top: 20px;
@@ -755,9 +756,7 @@ footer .tel {
 }
 
 .subscribe-holder::placeholder:focus {
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+  border: 2px solid var(--accent-text-color);
 }
 
 .footer-social,
@@ -919,6 +918,175 @@ footer .tel {
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   padding: 20px 24px;
+}
+
+.backdrop {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  background-position: center;
+}
+
+.modal {
+  position: absolute;
+  width: 528px;
+  top: 60%;
+  left: 53%;
+  transform: translate(-60%, -53%);
+}
+
+.close-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 1%;
+  right: 1%;
+
+  width: 30px;
+  height: 30px;
+  background-color: var(--dark-theme-text-color);
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 50%;
+}
+
+.close-modal:hover .icon-close {
+  fill: var(--accent-text-color);
+  cursor: pointer;
+}
+
+.icon-close {
+  fill: var(--main-text-color);
+}
+
+.form-action {
+  min-width: 528px;
+
+  background-color: var(--main-background-color);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-title {
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: var(--main-text-color);
+
+  margin-bottom: 30px;
+}
+
+.form-field {
+  position: relative;
+}
+
+.form-label {
+  position: absolute;
+  top: 30%;
+  left: 42px;
+  transform: translateY(-50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 42px;
+  margin-bottom: 28px;
+}
+
+.icon-label {
+  position: absolute;
+  top: 30%;
+  left: 16px;
+  transform: translateY(-50%);
+}
+
+.form-input,
+.form-textarea {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  width: 100%;
+}
+
+.form-textarea {
+  resize: none;
+  padding: 12px 16px;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) .form-label {
+  transform: translate(-26px, -40px);
+  color: var(--accent-text-color);
+}
+
+.form-input:focus ~ .icon-label,
+.form-input:not(:placeholder-shown) ~ .icon-label {
+  fill: var(--accent-text-color);
+}
+
+.checkbox-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.checkbox-form input {
+  margin-right: 10px;
+}
+
+.checkbox-form label {
+  color: var(--paragraph-text-color);
+}
+
+.link.check-up {
+  color: var(--accent-text-color);
+  text-decoration: underline;
+}
+
+.link.check-up:hover,
+.link.check-up:focus {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.submit-form {
+  text-align: center;
+}
+
+.submit-button {
+  width: 200px;
+  padding: 10px 55px;
+
+  line-height: 1.87;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  background-color: var(--accent-text-color);
+  color: var(--dark-theme-text-color);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+
+  transform: scale(1, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submit-button:hover,
+.submit-button:focus {
+  background-color: var(--hover-button-color);
+  transform: scale(1.1, 1.1);
 }
 
 /* Выпадающее меню */
