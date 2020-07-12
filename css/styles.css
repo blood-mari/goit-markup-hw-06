@@ -1114,6 +1114,10 @@ footer .tel {
   background-origin: border-box;
 }
 
+.checkbox:focus + .check-icon {
+  outline: 1px solid var(--accent-text-color);
+}
+
 .link.check-up {
   color: var(--accent-text-color);
   text-decoration: underline;
