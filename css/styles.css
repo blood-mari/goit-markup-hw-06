@@ -955,7 +955,7 @@ footer .tel {
   width: 528px;
   top: 60%;
   left: 53%;
-  transform: translate(-60%, -53%) scale(1);
+  transform: translate(-55%, -51%) scale(1);
   transition: trasform var(--timing-function);
 }
 
@@ -1066,7 +1066,7 @@ footer .tel {
 
 .form-textarea:focus + .form-label,
 .form-textarea:not(:placeholder-shown) .form-label {
-  transform: translate(-10px, -43px);
+  transform: translate(0px, -40px);
   color: var(--accent-text-color);
   font-size: 12px;
 }
@@ -1112,10 +1112,6 @@ footer .tel {
   border-color: transparent;
   background-size: contain;
   background-origin: border-box;
-}
-
-.checkbox:focus + .check-icon {
-  outline: 1px solid var(--accent-text-color);
 }
 
 .link.check-up {
