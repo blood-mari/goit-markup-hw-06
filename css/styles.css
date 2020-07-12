@@ -20,6 +20,7 @@
   --border-color: #afb1b8;
   --font-body: "Roboto", sans-serif;
   --font-logo: "Raleway", sans-serif;
+  --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -62,9 +63,21 @@ ul {
   padding: 0;
 }
 
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
 /* Hidden text */
 
-.visually-hidden {
+.visually-hidden,
+.checkbox {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
@@ -91,8 +104,10 @@ ul {
   z-index: 1;
   min-height: 80px;
   width: 100%;
+  font-size: 14px;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
   font-weight: 500;
-  line-height: 1.14;
 
   border: 1px solid #e5e5e5;
   background-color: var(--main-background-color);
@@ -109,7 +124,7 @@ ul {
 
 .header-logo-tail {
   color: var(--main-text-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--timing-function);
 }
 
 .page-header .logo {
@@ -171,7 +186,7 @@ ul {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--timing-function);
 }
 
 .contacts-header {
@@ -185,7 +200,7 @@ ul {
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--timing-function);
 }
 
 .icon-envelope {
@@ -198,8 +213,7 @@ ul {
   fill: #afb1b8;
   stroke: #afb1b8;
   stroke-width: 1px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--timing-function), stroke var(--timing-function);
 }
 
 .contacts-link:hover,
@@ -270,11 +284,6 @@ ul {
 
 /* Order the option - main button */
 
-button {
-  font-family: inherit;
-  cursor: pointer;
-}
-
 .button {
   font-size: 16px;
   font-weight: 500;
@@ -287,8 +296,8 @@ button {
   border-radius: 4px;
   border: 1px solid transparent;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 50ms,
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 50ms;
+  transition: color var(--timing-function) 50ms,
+    background-color var(--timing-function) 50ms;
 }
 
 .button.primary {
@@ -304,7 +313,7 @@ button {
   min-width: 200px;
   margin-top: 30px;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 50ms;
+  transition: background-color var(--timing-function) 50ms;
 }
 
 .button.primary:hover,
@@ -413,7 +422,7 @@ button {
   width: 100%;
 
   opacity: 0.3;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 100ms;
+  transition: opacity var(--timing-function);
 
   font-size: 14px;
   font-weight: 700;
@@ -527,7 +536,7 @@ button {
   width: 20px;
   height: 20px;
   fill: #afb1b8;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--timing-function);
 }
 
 .team-social .social-link:hover .icon-social,
@@ -566,10 +575,8 @@ button {
   align-items: center;
 
   transform: scale(1, 1);
-  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-width 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--timing-function), fill var(--timing-function),
+    border-width var(--timing-function), border-color var(--timing-function);
 }
 
 .clients-link:hover,
@@ -588,42 +595,42 @@ button {
   width: 88px;
   height: 45px;
   fill: #afb1b8;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--timing-function);
 }
 
 .clients-icon-5 {
   width: 59px;
   height: 47px;
   fill: #afb1b8;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--timing-function);
 }
 
 .clients-icon-4 {
   width: 80px;
   height: 42px;
   fill: #afb1b8;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--timing-function);
 }
 
 .clients-icon-3 {
   width: 41px;
   height: 43px;
   fill: #afb1b8;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--timing-function);
 }
 
 .clients-icon-2 {
   width: 40px;
   height: 52px;
   fill: #afb1b8;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--timing-function);
 }
 
 .clients-icon-1 {
   width: 44px;
   height: 49px;
   fill: #afb1b8;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--timing-function);
 }
 
 /* Logo site footer */
@@ -655,7 +662,7 @@ footer .logo {
 
 .footer-logo-tail {
   color: var(--dark-theme-text-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--timing-function);
 }
 
 .footer-logo-tail:hover,
@@ -675,7 +682,7 @@ address li:not(:last-child) {
 footer .mail,
 footer .tel {
   color: var(--footer-contacts-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--timing-function);
 }
 
 .link.mail:hover,
@@ -708,7 +715,7 @@ footer .tel {
   margin-bottom: 20px;
   min-width: 200px;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 50ms;
+  transition: background-color var(--timing-function) 50ms;
 }
 
 .button.secondary:hover,
@@ -792,7 +799,7 @@ footer .tel {
   border-radius: 50%;
   width: 44px;
   height: 44px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--timing-function);
 }
 
 /* .copyright {
@@ -869,7 +876,7 @@ footer .tel {
   left: 0;
 
   transform: translateY(101%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--timing-function);
 
   background-color: rgba(33, 150, 243, 0.9);
   width: 100%;
@@ -930,17 +937,26 @@ footer .tel {
   margin-right: auto;
   margin-left: auto;
   background-color: rgba(0, 0, 0, 0.2);
-  /* background-repeat: no-repeat; */
-  background-size: cover;
-  background-position: center;
+  opacity: 1;
+  transition: opacity var(--timing-function), transform var(--timing-function);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  overflow: hidden;
+  transform: scale(1.5);
+  pointer-events: none;
 }
 
 .modal {
+  color: var(--paragraph-text-color);
+
   position: absolute;
   width: 528px;
   top: 60%;
   left: 53%;
-  transform: translate(-60%, -53%);
+  transform: translate(-60%, -53%) scale(1);
+  transition: trasform var(--timing-function);
 }
 
 .close-modal {
@@ -986,16 +1002,22 @@ footer .tel {
   margin-bottom: 30px;
 }
 
-.form-field {
+.form-field,
+.field-textarea {
   position: relative;
 }
 
 .form-label {
+  display: block;
   position: absolute;
   top: 30%;
   left: 42px;
+
   transform: translateY(-50%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--timing-function), font-size var(--timing-function);
+
+  line-height: 1.33;
+  letter-spacing: 0.01em;
 }
 
 .form-input {
@@ -1009,7 +1031,19 @@ footer .tel {
   position: absolute;
   top: 30%;
   left: 16px;
+
+  fill: var(--main-text-color);
   transform: translateY(-50%);
+  transition: fill var(--timing-function);
+}
+
+.field-textarea .form-label {
+  position: absolute;
+  top: 21px;
+  left: 16px;
+
+  transform: translateY(-50%);
+  transition: transform var(--timing-function), font-size var(--timing-function);
 }
 
 .form-input,
@@ -1019,15 +1053,29 @@ footer .tel {
   width: 100%;
 }
 
+.form-input:focus,
+.form-textarea:focus {
+  border-color: var(--accent-text-color);
+  outline: none;
+}
+
 .form-textarea {
   resize: none;
   padding: 12px 16px;
+}
+
+.form-textarea:focus + .form-label,
+.form-textarea:not(:placeholder-shown) .form-label {
+  transform: translate(-10px, -43px);
+  color: var(--accent-text-color);
+  font-size: 12px;
 }
 
 .form-input:focus + .form-label,
 .form-input:not(:placeholder-shown) .form-label {
   transform: translate(-26px, -40px);
   color: var(--accent-text-color);
+  font-size: 12px;
 }
 
 .form-input:focus ~ .icon-label,
@@ -1045,10 +1093,24 @@ footer .tel {
 
 .checkbox-form input {
   margin-right: 10px;
+  cursor: pointer;
 }
 
-.checkbox-form label {
-  color: var(--paragraph-text-color);
+.checkbox-form .check-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--main-text-color);
+  border-radius: 4px;
+
+  margin-right: 8px;
+}
+
+.checkbox:checked + .check-icon {
+  background-color: var(--accent-text-color);
+  background-image: url(../images/icon-check.svg);
+  border-color: transparent;
+  background-origin: border-box;
 }
 
 .link.check-up {
@@ -1079,8 +1141,8 @@ footer .tel {
     0px 1px 3px rgba(0, 0, 0, 0.12);
 
   transform: scale(1, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--timing-function),
+    transform var(--timing-function);
 }
 
 .submit-button:hover,
