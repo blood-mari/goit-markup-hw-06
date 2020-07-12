@@ -1110,6 +1110,7 @@ footer .tel {
   background-color: var(--accent-text-color);
   background-image: url(../images/icon-check.svg);
   border-color: transparent;
+  background-size: contain;
   background-origin: border-box;
 }
 
